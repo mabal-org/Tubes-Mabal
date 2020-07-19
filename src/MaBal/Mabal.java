@@ -15,8 +15,8 @@ public class Mabal {
 	public void FrequencyHashMap() throws FileNotFoundException, IOException  {
 		File file = new File("D:\\Tubes-Mabal\\test.txt");
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-			Map<String, Integer> frequency = new HashMap<>();
-			
+			Map<String, Integer> map = new HashMap<>();
+	        int total = 0;
 			String line = reader.readLine();
 			
 			// read the file line by line
@@ -38,21 +38,22 @@ public class Mabal {
 						String processed = word.toLowerCase(); //bikin semua word nya dijadiin lowercase bisa uppercase jg bebas, biar nanti untuk kata yg berawalan huruf besar dan kecil akan terhitung sama
 						processed = processed.replace(",", "");
 						
-						if(frequency.containsKey(processed)) {
-							frequency.put(processed, 
-									frequency.get(processed) + 1);
+						if(map.containsKey(processed)) {
+							map.put(processed, 
+									map.get(processed) + 1);
 						} else {
-							frequency.put(processed, 1);
+							map.put(processed, 1);
 						}
+						 total++;
 					}
 				}
 				
 				line = reader.readLine();
 			}
-			
-			
-			System.out.println(frequency);
-			
+			 map.entrySet().stream().forEach((entry) -> { // Mengambil semua key dan value yang ada di map dengan memakai loop forEach
+				 System.out.println(entry.getKey() + "\t" + "\t" + "=" + "  " + entry.getValue()); // \t : Is used to add tab. We can use this to print a tabulator.
+	        	});
+		        System.out.println("Total Kata di Dalam File : " + total);
 		}
 		
 	}
