@@ -1,8 +1,0 @@
-iqbal Iqbal ini belajar pemrograman java sambil makan kuaci iqbal masak ayam 
-Berikut ini merupakan suatu teknik yang 
-digunakan untuk mendeteksi error pada code Exception Berikut ini 
-termasuk Teknik Defensive Programming, Kecuali… If /ElseTeknik pada Error Handling yang mengembalikan nilai 0 adalah.. 
-Return a neutral value
-
-sksjfglksl;fg
-slfdgkskl
