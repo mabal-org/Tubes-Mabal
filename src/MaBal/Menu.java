@@ -14,13 +14,9 @@ public class Menu{
 
         int menu;
         System.out.println("----------MENU----------- ");
-        System.out.println("1. Add File");
-        System.out.println("2. Count Pargapraph");
-        System.out.println("3. Count Senteces");
-        System.out.println("4. Count Words");
-        System.out.println("5. Count All Characters");
-        System.out.println("6. Count Each Words");
-        System.out.println("7. Most Frequently Used Word");
+        System.out.println("1. Words Frequency in A File Text Using HashMap ");
+        System.out.println("2. Words Frequency in A File Text Using TreeMap ");
+        System.out.println("3. Most Frequently Used Word");
         System.out.println("0.Exit");
         
         System.out.print("To choose input the number : ");
@@ -29,10 +25,6 @@ public class Menu{
         if(menu==0){
         	System.out.println("GoodBye~ :'(\n");
         	System.exit(0);
-        	}
-        else if(menu==1){
-        	System.out.println("The file already inputted\n");
-        	mainMenu();
         	}
         else if(menu==2){
         	CountParagraph countParagraph = new CountParagraph();
@@ -50,8 +42,8 @@ public class Menu{
         	CountCharacter countCharacter = new CountCharacter();
         	mainMenu();
         }
-        else if(menu==6){
-        	Frequency frequency = new Frequency();
+        else if(menu==1){
+        	FrequencyHashMap frequency = new FrequencyHashMap();
         	mainMenu();
         }
         else if(menu==7){
