@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Menu{
 	private Scanner key;
-	private Mabal mabal;
 	
 	public Menu() {
 		key=new Scanner(System.in);
@@ -27,15 +26,15 @@ public class Menu{
         	System.exit(0);
         	}
         else if(menu==1){
-        	mabal.FrequencyHashMap();
+        	Mabal.FrequencyHashMap();
         	mainMenu();
         	}
         else if(menu==2){
-        	mabal.FrequencyTreeMap();
+        	Mabal.FrequencyTreeMap();
         	mainMenu();
         	}
         else if(menu==3){
-        	mabal.FrequentlyWordUsed();
+        	Mabal.FrequentlyWordUsed();
         	mainMenu();
         
         }

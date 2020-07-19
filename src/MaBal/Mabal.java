@@ -11,8 +11,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 public class Mabal {
     
-    
-	public void FrequencyHashMap() throws FileNotFoundException, IOException  {
+	public static void FrequencyHashMap() throws FileNotFoundException, IOException  {
 		File file = new File("D:\\Tubes-Mabal\\test.txt");
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 			Map<String, Integer> map = new HashMap<>();
@@ -55,9 +54,9 @@ public class Mabal {
 	        	});
 		        System.out.println("Total Kata di Dalam File : " + total);
 		}
-		
 	}
-	public void FrequentlyWordUsed() throws FileNotFoundException, IOException {
+	
+	public static void FrequentlyWordUsed() throws FileNotFoundException, IOException {
 		File file = new File("D:\\Tubes-Mabal\\test.txt");
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 			Map<String, Integer> frequency = new HashMap<>();
@@ -104,13 +103,13 @@ public class Mabal {
 		
 	}
 	
-	public void FrequencyTreeMap() throws FileNotFoundException {
+	public static void FrequencyTreeMap() throws FileNotFoundException {
 		// Menggunakan Tree Map sebagai Struktur Data karena memiliki Ascending dan juga mendapatkan Valuenya
         TreeMap<String, Integer> map = new TreeMap<String, Integer>();
         int total = 0;
         int i;
         // Mensplit operator yang tidak perlu
-        String delimitter = "[!?.:]+,[/\\n]";
+        String delimitter = "[!?.:]+,[/n],";
 
         // Menscan dan membuka + membaca File
         File file = new File("D:\\Tubes-Mabal\\test.txt");
@@ -135,7 +134,7 @@ public class Mabal {
                 }
             }
         map.entrySet().stream().forEach((entry) -> { // Mengambil semua key dan value yang ada di map dengan memakai loop forEach
-        	System.out.println(entry.getKey() + "\t" + "\t" + "=" + "  " + entry.getValue()); // \t : Is used to add tab. We can use this to print a tabulator.
+        	System.out.println(entry.getKey() + "\t" + "\t" + "\t" + "=" + "  " + entry.getValue()); // \t : Is used to add tab. We can use this to print a tabulator.
         	});
         
         System.out.println("====================================");
